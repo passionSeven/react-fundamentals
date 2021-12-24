@@ -10,9 +10,10 @@ import '../box-styles.css'
 
 // The box className and fontStyle: 'italic' style should be applied in addition to the values that come from props.
 
-const Box = ({size = 'medium', style = {}, children}) => {
+const Box = ({size, style = {}, children}) => {
+  const styleClassName = size ? `box--${size}` : ''
   return (
-    <div className={`box box--${size}`} style={{fontStyle: 'italic', ...style}}>
+    <div className={`box ${styleClassName}`.trim()} style={{fontStyle: 'italic', ...style}}>
       {children}
     </div>
   )
