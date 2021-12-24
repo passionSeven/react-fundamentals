@@ -23,8 +23,8 @@ function UsernameForm({onSubmitUsername}) {
   return (
     <form onSubmit={handleSumbit}>
       <div>
-        <label>Username:</label>
-        <input name="username" type="text" />
+        <label htmlFor="username">Username:</label>
+        <input id="username" type="text" />
       </div>
       <button type="submit">Submit</button>
     </form>
