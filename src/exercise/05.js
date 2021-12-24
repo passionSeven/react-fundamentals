@@ -10,9 +10,9 @@ import '../box-styles.css'
 
 // The box className and fontStyle: 'italic' style should be applied in addition to the values that come from props.
 
-const Box = ({className, style, children}) => {
+const Box = ({size, style, children}) => {
   return (
-    <div className={'box ' + className} style={{fontStyle: 'italic', ...style}}>
+    <div className={`box box--${size}`} style={{fontStyle: 'italic', ...style}}>
       {children}
     </div>
   )
@@ -21,13 +21,13 @@ const Box = ({className, style, children}) => {
 function App() {
   return (
     <div>
-      <Box className="box--small" style={{backgroundColor: 'lightblue'}}>
+      <Box size="small" style={{backgroundColor: 'lightblue'}}>
         small lightblue box
       </Box>
-      <Box className="box--medium" style={{backgroundColor: 'orange'}}>
+      <Box size="medium" style={{backgroundColor: 'orange'}}>
         medium orange box
       </Box>
-      <Box className="box--large" style={{backgroundColor: 'goldenrod'}}>
+      <Box size="large" style={{backgroundColor: 'goldenrod'}}>
         large goldenrod box
       </Box>
     </div>
