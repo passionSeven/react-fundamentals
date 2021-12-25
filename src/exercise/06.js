@@ -18,7 +18,7 @@ function UsernameForm({onSubmitUsername}) {
   }
 
   const handleUsernameChange = event => {
-    setUsername(event.target.value)
+    setUsername(event.target.value.toLowerCase())
   }
 
   return (
